@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="60">
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="arctic-chill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F882" /> <!-- Mindaro -->
+      <stop offset="100%" stop-color="#38B789" /> <!-- Mint -->
+    </linearGradient>
+  </defs>
+  
+  <!-- CSM Text -->
+  <text x="10" y="40" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="white" stroke="url(#arctic-chill)" stroke-width="1">CSM</text>
+  
+  <!-- Customer Service Icon -->
+  <g transform="translate(80, 10)">
+    <!-- Headset representing customer service -->
+    <path d="M30,0 C13.4,0 0,13.4 0,30 L0,40 C0,42.2 1.8,44 4,44 L8,44 C10.2,44 12,42.2 12,40 L12,30 C12,27.8 10.2,26 8,26 L4,26 C4,15.5 12.5,7 23,7 C33.5,7 42,15.5 42,26 L38,26 C35.8,26 34,27.8 34,30 L34,40 C34,42.2 35.8,44 38,44 L42,44 C44.2,44 46,42.2 46,40 L46,30 C46,13.4 32.6,0 16,0 Z" fill="url(#arctic-chill)" stroke="white" stroke-width="1" transform="scale(0.8)" />
+    
+    <!-- Chat bubble representing customer interaction -->
+    <path d="M50,15 C55,15 60,20 60,25 C60,30 55,35 50,35 L45,35 L40,40 L40,35 C35,35 30,30 30,25 C30,20 35,15 40,15 Z" fill="url(#arctic-chill)" opacity="0.9" stroke="white" stroke-width="1" />
+    
+    <!-- Customer service dots -->
+    <circle cx="40" cy="25" r="2" fill="white" />
+    <circle cx="45" cy="25" r="2" fill="white" />
+    <circle cx="50" cy="25" r="2" fill="white" />
+  </g>
+</svg>

@@ -1,0 +1,140 @@
+:root {
+    /* Primary colors */
+    --color-begonia: #FD7272;
+    --color-sky-blue: #6AE1F0;
+    --color-mindaro: #E0F882;
+    --color-mint: #38B789;
+    --color-indigo-500: #4F46E5;
+    --color-indigo-600: #4F46E5;
+    --color-indigo-700: #4338CA;
+    
+    /* Success/Error/Warning colors */
+    --color-emerald-500: #10B981;
+    --color-rose-500: #F43F5E;
+    --color-amber-400: #FBBF24;
+    
+    /* Neutral colors */
+    --color-zinc-100: #F4F4F5;
+    --color-zinc-200: #E4E4E7;
+    --color-zinc-700: #3F3F46;
+    --color-zinc-800: #27272A;
+    --color-zinc-900: #18181B;
+    --color-white: #FFFFFF;
+}
+
+/* Custom styles to enhance Tailwind */
+.btn-primary {
+    background-color: var(--color-indigo-600);
+    color: var(--color-white);
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-indigo-700);
+}
+
+.btn-success {
+    background-color: var(--color-emerald-500);
+    color: var(--color-white);
+}
+
+.btn-danger {
+    background-color: var(--color-rose-500);
+    color: var(--color-white);
+}
+
+.btn-warning {
+    background-color: var(--color-amber-400);
+    color: var(--color-zinc-900);
+}
+
+/* Smooth transitions */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Custom focus styles for better accessibility */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--color-indigo-500);
+    outline-offset: 2px;
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-zinc-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-zinc-700);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-indigo-500);
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--color-indigo-600), var(--color-indigo-700));
+}
+
+/* Fire & Ice Gradient */
+.bg-gradient-fire-ice {
+    background: linear-gradient(135deg, var(--color-begonia), var(--color-sky-blue));
+}
+
+.text-gradient-fire-ice {
+    background: linear-gradient(135deg, var(--color-begonia), var(--color-sky-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.border-gradient-fire-ice {
+    border-image: linear-gradient(135deg, var(--color-begonia), var(--color-sky-blue)) 1;
+}
+
+/* Arctic Chill Gradient */
+.bg-gradient-arctic-chill {
+    background: linear-gradient(135deg, var(--color-mindaro), var(--color-mint));
+}
+
+.text-gradient-arctic-chill {
+    background: linear-gradient(135deg, var(--color-mindaro), var(--color-mint));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.border-gradient-arctic-chill {
+    border-image: linear-gradient(135deg, var(--color-mindaro), var(--color-mint)) 1;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

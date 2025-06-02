@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CSM - Agentic Customer Service Management{% endblock %}</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/favicon.svg' %}" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-white text-zinc-900 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-gradient-arctic-chill shadow-md py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="{% url 'landing_page:index' %}" class="flex items-center">
+                    <img src="{% static 'images/csm-logo.svg' %}" alt="CSM Logo" class="h-12">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-white hover:text-zinc-100 transition duration-300">Features</a>
+                    <a href="#pricing" class="text-white hover:text-zinc-100 transition duration-300">Pricing</a>
+                    <a href="#about" class="text-white hover:text-zinc-100 transition duration-300">About</a>
+                    <a href="{% url 'account_login' %}" class="text-white hover:text-zinc-100 transition duration-300">Login</a>
+                    <a href="{% url 'account_signup' %}" class="bg-white text-zinc-800 hover:bg-zinc-100 py-2 px-4 rounded-lg transition duration-300">Start Free Trial</a>
+                </div>
+                
+                <!-- Mobile Navigation Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-zinc-100 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-2 bg-white rounded-lg shadow-lg">
+                <a href="#features" class="block py-2 text-zinc-700 hover:bg-gradient-fire-ice hover:text-white transition duration-300 px-4">Features</a>
+                <a href="#pricing" class="block py-2 text-zinc-700 hover:bg-gradient-fire-ice hover:text-white transition duration-300 px-4">Pricing</a>
+                <a href="#about" class="block py-2 text-zinc-700 hover:bg-gradient-fire-ice hover:text-white transition duration-300 px-4">About</a>
+                <a href="{% url 'account_login' %}" class="block py-2 text-zinc-700 hover:bg-gradient-fire-ice hover:text-white transition duration-300 px-4">Login</a>
+                <a href="{% url 'account_signup' %}" class="block py-2 text-zinc-700 hover:bg-gradient-fire-ice hover:text-white transition duration-300 px-4">Start Free Trial</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-800 text-zinc-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">CSM</h3>
+                    <p class="text-zinc-300">Transforming customer service with AI-powered intelligence.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-zinc-300 hover:text-white transition duration-300">Features</a></li>
+                        <li><a href="#pricing" class="text-zinc-300 hover:text-white transition duration-300">Pricing</a></li>
+                        <li><a href="#" class="text-zinc-300 hover:text-white transition duration-300">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-zinc-300 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#" class="text-zinc-300 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#" class="text-zinc-300 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-zinc-300 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-zinc-300 hover:text-white transition duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-zinc-700 mt-8 pt-8 text-center text-zinc-300">
+                <p>&copy; {% now "Y" %} CSM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

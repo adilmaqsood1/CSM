@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="arctic-chill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F882" /> <!-- Mindaro -->
+      <stop offset="100%" stop-color="#38B789" /> <!-- Mint -->
+    </linearGradient>
+  </defs>
+  
+  <!-- Background shape -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#arctic-chill)" />
+  
+  <!-- CSM letter -->
+  <text x="12" y="44" font-family="Arial, sans-serif" font-weight="bold" font-size="32" fill="white">C</text>
+  
+  <!-- AI circuit pattern -->
+  <circle cx="44" cy="32" r="3" fill="white" />
+  <circle cx="36" cy="24" r="3" fill="white" />
+  <circle cx="44" cy="16" r="3" fill="white" />
+  <line x1="44" y1="32" x2="36" y2="24" stroke="white" stroke-width="2" />
+  <line x1="36" y1="24" x2="44" y2="16" stroke="white" stroke-width="2" />
+</svg>
