@@ -10,9 +10,10 @@ django-allauth==0.58.2  # For user authentication
 django-cryptography==1.1  # For encrypting sensitive data
 
 # Database and storage
-neondb==0.1.1  # NeonDB client
+# Removed neondb as it's not available on PyPI
+psycopg2-binary==2.9.9  # PostgreSQL adapter for database connections
 faiss-cpu==1.7.4  # Vector database for embeddings
-pytorch==2.1.0  # Required for SentenceTransformers
+torch==2.1.0  # Required for SentenceTransformers (pytorch renamed to torch)
 sentence-transformers==2.2.2  # For creating embeddings
 
 # NLP and AI components

@@ -5,19 +5,26 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "staticfiles"
+        "distDir": "staticfiles",
+        "zeroConfig": true
       }
     },
     {
       "src": "csm/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" }
+      "config": { 
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.9"
+      }
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
       "dest": "/staticfiles/$1"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
