@@ -1,22 +1,14 @@
-# Django and core dependencies
 django==5.2.1
 psycopg2-binary==2.9.9  # PostgreSQL adapter for NeonDB
 python-dotenv==1.0.0  # For environment variables
 whitenoise==6.5.0  # For serving static files
 dj-database-url==2.1.0  # For database configuration
-
-# Authentication and security
 django-allauth==0.58.2  # For user authentication
 django-cryptography==1.1  # For encrypting sensitive data
-
-# Database and storage
-# Removed neondb as it's not available on PyPI
 psycopg2-binary==2.9.9  # PostgreSQL adapter for database connections
 faiss-cpu==1.7.4  # Vector database for embeddings
 torch==2.1.0  # Required for SentenceTransformers (pytorch renamed to torch)
 sentence-transformers==2.2.2  # For creating embeddings
-
-# NLP and AI components
 openai-whisper==20231117  # For voice transcription
 groq==0.4.0  # Groq API client for LLaMA 70B
 langchain==0.0.335  # For building LLM applications
@@ -24,12 +16,9 @@ langchain-groq==0.0.6  # Groq integration for LangChain
 langchain-community==0.0.13  # Community extensions
 langgraph==0.0.19  # For agentic workflows
 
-# Document processing
 pypdf2==3.0.1  # PDF processing
 pandas==2.1.1  # For CSV processing
 markdown==3.5  # For Markdown processing
-
-# Communication integrations
 twilio==8.10.0  # For WhatsApp integration via Twilio
 requests==2.31.0  # For API calls
 
