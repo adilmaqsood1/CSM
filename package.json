@@ -1,0 +1,12 @@
+{
+  "name": "csm",
+  "version": "1.0.0",
+  "description": "Customer Service Management System",
+  "scripts": {
+    "build": "bash ./build_files.sh"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "private": true
+}
